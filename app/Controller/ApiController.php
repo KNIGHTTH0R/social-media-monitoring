@@ -6,7 +6,7 @@ class ApiController extends AppController {
         $this->layout = false; 
         if ($this->request->is('post')) {
             $term = $_POST['term'];
-            $network = "twitter";
+            $network = $_POST['network'];
             $url = "https://api.social-searcher.com/v2/search?q='$term'&network=$network&limit=3";
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_URL,$url);

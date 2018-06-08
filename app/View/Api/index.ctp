@@ -28,9 +28,14 @@ if (isset($output)) {?>
         </tbody>
        </table>
     <?php } }?>
-?>
+
     <form action="<?php echo $this->webroot;?>api" method="post">
     <input type="text" name="term">
+    <select name="network" id="" placeholder="Please choose">
+    <option value="choose">Choose</option>
+    <option value="facebook">Facebook</option>
+    <option value="twitter">Twitter</option>
+    </select>
     <input type="submit" value="Submit">
     </form>
 </body>
